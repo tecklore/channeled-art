@@ -1,21 +1,107 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <header *ngIf="isDesktop">
+    <img src="assets/images/siteTitle.png" width="437" height="45">
+  </header>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<nav *ngIf="isDesktop">
+  <div class="container">
+    <div class="navBg">
+      <div class="navLeft">
+        <img src="assets/images/navLeft.jpg" width="69" height="40">
+      </div>
+      <div class="navMid">
+        <div class="menu">
+          <ul>
+            <li class="first"><a routerLink="/">Home</a></li>
+            <li><a routerLink="/oilPainting/biography">Biography</a></li>
+            <li><a routerLink="/oilPainting/surrender">Paintings</a>
+              <ul>
+                <li><a routerLink="/oilPainting/surrender">Aspects of Goddess</a>
+                  <ul>
+                    <li><a routerLink="/oilPainting/surrender">Surrender</a></li>
+                    <li><a routerLink="/oilPainting/theBeloved">The Beloved</a></li>
+                    <li><a routerLink="/oilPainting/returnOfTheGoddess">Return of the Goddess</a></li>
+                    <li><a routerLink="/oilPainting/passionAndSpirit">Passion And Spirit</a></li>
+                    <li><a routerLink="/oilPainting/healing">The Healing</a></li>
+                    <li><a routerLink="/oilPainting/blueTango">Blue Tango</a></li>
+                    <li><a routerLink="/oilPainting/starmaker">Starmaker</a></li>
+                    <li><a routerLink="/oilPainting/goddessCreating">Goddess Creating</a></li>
+                  </ul>
+                </li>
+
+                <li><a routerLink="/oilPainting/journey">Landscapes of Mind</a>
+                  <ul>
+                    <li><a routerLink="/oilPainting/journey">Journey into the Light</a></li>
+                    <li><a routerLink="/oilPainting/theGathering">The Gathering</a></li>
+                    <li><a routerLink="/oilPainting/kundalini">Kundalini Shakti</a></li>
+                    <li><a routerLink="/oilPainting/unleashing">The Unleashing</a></li>
+                    <li><a routerLink="/oilPainting/amethyst">Amethyst</a></li>
+                  </ul>
+                </li>
+
+                <li><a routerLink="/oilPainting/primordial">Expressions of Earth</a>
+                  <ul>
+                    <li><a routerLink="/oilPainting/primordial">Primordial</a></li>
+                    <li><a routerLink="/oilPainting/theEmeraldProtector">The Emerald Protector</a></li>
+                    <li><a routerLink="/oilPainting/forest">The Forest</a></li>
+                    <li><a routerLink="/oilPainting/atlantis">The Fall of Atlantis</a></li>
+                    <li><a routerLink="/oilPainting/seedingTheWind">Seeding the Wind</a></li>
+                    <li><a routerLink="/oilPainting/slipStream">Slipstream</a></li>
+                    <li><a routerLink="/oilPainting/lagoon">Lagoon</a></li>
+                    <li><a routerLink="/oilPainting/storm">Storm</a></li>
+                    <li><a routerLink="/oilPainting/eyeOfTheBeholder">The Eye of the Beholder</a></li>
+                    <li><a routerLink="/oilPainting/icarus">Icarus</a></li>
+                    <li><a routerLink="/oilPainting/stream">The Stream</a></li>
+                    <li><a routerLink="/oilPainting/refuge">Refuge</a></li>
+                  </ul>
+                </li>
+                <li><a routerLink="/oilPainting/angelOfFire">Portraits of the Soul</a>
+                  <ul>
+                    <li><a routerLink="/oilPainting/angelOfFire">Angel of Fire</a></li>
+                    <li><a routerLink="/oilPainting/pilgrim">The Pilgrim</a></li>
+                    <li><a routerLink="/oilPainting/archangel">Archangel</a></li>
+                    <li><a routerLink="/oilPainting/shaman">The Shaman</a></li>
+                    <li><a routerLink="/oilPainting/yearning">The Yearning</a></li>
+                    <li><a routerLink="/oilPainting/romancingTheShadow">Romancing the Shadow</a></li>
+                    <li><a routerLink="/oilPainting/theEmbrace">The Embrace</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a routerLink="/oilPainting/missingMessiah">Missing Messiah</a></li>
+            <li><a routerLink="/oilPainting/fatima">Portraits</a></li>
+            <li><a routerLink="/oilPainting/videos">Videos</a></li>
+            <li><a routerLink="/oilPainting/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navRight">
+        <img src="assets/images/navRight.jpg" width="69" height="40">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div *ngIf = "!isDesktop">
+  <div class="topnav" id="myTopnav">
+    <a routerLink="" class="active">Home</a>
+    <a routerLink="/oilPainting/biography" (click)="onMenuClick()">Biography</a>
+    <a routerLink="/oilPainting/surrender" (click)="onMenuClick()">Paintings</a>
+    <a routerLink="/oilPainting/missingMessiah" (click)="onMenuClick()">Missing Messiah</a>
+    <a routerLink="/oilPainting/fatima" (click)="onMenuClick()">Portraits</a>
+    <a routerLink="/oilPainting/videos" (click)="onMenuClick()">Videos</a>
+    <a routerLink="/oilPainting/contact" (click)="onMenuClick()">Contact</a>
+    <a href="javascript:void(0);" class="icon" (click)="onMenuClick()">
+      <button class="menu-toggle" id="menu-toggle">Menu</button>
+    </a>
+  </div>
+
+</div>
 
 <router-outlet></router-outlet>
+
+
+
+
+
